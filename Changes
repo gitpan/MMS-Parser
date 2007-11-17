@@ -1,5 +1,8 @@
 Revision history for MMS-Parser
 
+0.1.1  Sat Nov 17 01:54:00 2007
+       Made it work with perl 5.6.2
+
 0.1.0  Sat Nov 10 19:30:00 2007
        Initial release.
 

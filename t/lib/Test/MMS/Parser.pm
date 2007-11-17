@@ -3,8 +3,9 @@ package Test::MMS::Parser;
 use Test::More;
 use strict;
 use warnings;
-use Exporter qw( import );
+use Exporter;
 
+our @ISA = 'Exporter';
 our @EXPORT = qw(
    make_checker numerify_range check_cases char_range immediate
    create_generator destroy_generator check_generator

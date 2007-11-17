@@ -8,6 +8,7 @@ my $builder = Module::Build->new(
    dist_author       => 'Flavio Poletti <flavio [at] polettix [dot] it>',
    dist_version_from => 'lib/MMS/Parser.pm',
    requires          => {
+      'perl'              => '5.6.2',
       'version'           => 0,
       'Test::More'        => 0,
       'Path::Class'       => 0,

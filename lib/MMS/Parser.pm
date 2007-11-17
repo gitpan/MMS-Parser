@@ -1,5 +1,5 @@
 package MMS::Parser;
-use version; our $VERSION = qv('0.1.0');
+use version; our $VERSION = qv('0.1.1');
 use MMS::Parser::WorkHorse;
 
 sub create { return MMS::Parser::WorkHorse->new() }
