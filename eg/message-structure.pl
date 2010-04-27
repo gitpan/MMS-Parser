@@ -75,7 +75,7 @@ for my $part (@parts) {
       next;
    }
    print {*STDOUT} "   * saving part data into $filename\n";
-   write_file $filename, $part->{data};
+   write_file $filename, {binmode => ':raw'}, $part->{data};
 } ## end for my $part (@parts)
 
 __END__

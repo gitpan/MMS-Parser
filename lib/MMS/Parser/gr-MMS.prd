@@ -5,7 +5,7 @@ M_Send_Req_message: message_type_head_code m_send_req
                 content_type_head
                 multipart {
    my %headers;
-   $headers{message_type_head} = 'm_retrieve_conf';
+   $headers{message_type_head} = 'm_send_req';
    foreach my $header (@item[4,6], $item[3], @{$item[5]}) {
       my ($name, $value) = @$header;
       $headers{$name} = $value;
@@ -22,6 +22,7 @@ M_Notification_Ind_message: message_type_head_code m_notification_ind
                             MMS_version_head
                             header(s?) {
    my %retval;
+   $retval{message_type_head} = 'm_notification_ind';
    foreach my $header (@item[3,4], @{$item[5]}) {
       next unless ref($header) eq 'ARRAY';
       my ($name, $value) = @$header;
@@ -200,12 +201,7 @@ expiry_value: _mixed_time_value
 from_value: value_length ( ( address_present_token _address_value )
                            | insert_address_token)
 {
-   if (exists $item{insert_address_token}) {
-      $return = ($item[1] == 1) ? '' : undef;
-   }
-   else {
-      $return = $item[2];
-   }
+   $return = $item[2];
    defined($return) || undef;
 }
 address_present_token: "\x80" { $return = 'address-present'; 1; }

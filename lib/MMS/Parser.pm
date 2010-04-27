@@ -1,5 +1,7 @@
 package MMS::Parser;
-use version; our $VERSION = qv('0.1.1');
+use strict;
+use warnings;
+use version; our $VERSION = qv('0.1.2');
 use MMS::Parser::WorkHorse;
 
 sub create { return MMS::Parser::WorkHorse->new() }
@@ -14,7 +16,7 @@ MMS::Parser - parsing facilities for binary MMS messages
 
 =head1 VERSION
 
-This document describes MMS::Parser version 0.0.1
+This document describes MMS::Parser version 0.1.2
 
 
 =head1 SYNOPSIS
