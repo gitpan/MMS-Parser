@@ -26,7 +26,7 @@ pod2usage(-verbose => 99, -sections => 'USAGE')
   unless @ARGV == 1 && -e $ARGV[0];
 
 # Script implementation here
-my $packed = read_file $ARGV[0];
+my $packed = read_file $ARGV[0], binmode => ':raw';
 my $parser = MMS::Parser->create();
 
 # First of all, establish which type this MMS packet is
