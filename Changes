@@ -1,5 +1,9 @@
 Revision history for MMS-Parser
 
+0.1.4  Sun Jul 21 16:17:00 2013
+       Fixed encoding in POD.
+       Removed tests for non-authors.
+
 0.1.3
        Adjusted documentation and made podchecker happy 
        Added 'binmode' parameter in read_file in example script

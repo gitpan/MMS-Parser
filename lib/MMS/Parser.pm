@@ -1,13 +1,15 @@
 package MMS::Parser;
 use strict;
 use warnings;
-use version; our $VERSION = qv('0.1.3');
+use version; our $VERSION = qv('0.1.4');
 use MMS::Parser::WorkHorse;
 
 sub create { return MMS::Parser::WorkHorse->new() }
 
 1;    # Magic true value required at end of module
 __END__
+
+=encoding iso-8859-1
 
 =head1 NAME
 
